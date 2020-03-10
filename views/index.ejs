@@ -1,67 +1,628 @@
 <link rel="stylesheet" href="/css/main.css">
 
 <div class="layout">
-    
 
-<div class="today">
-    <div class="today_wrap">
-        <div class="today_wrap-item">
-            <div class="today_wrap-item_logo">
-                <div class="today_wrap-item_logo-inner"></div>
+<!-- HORIZONTAL_TYPE -->
+    <style>
+        .today {
+            border: 1px solid #e2e2e2;
+            width: 100%;
+            min-height: 250px;
+            max-height: 250px;
+            overflow: hidden;
+        }
+        .today_wrap {
+            height: 100%;
+            max-height: 250px;
+            display: flex;
+        }
+        .today_wrap-item {
+            height: 100%;
+            width: 100%;
+        }
+        .today_wrap-item_inner {
+            display: flex;
+            height: 100%;
+        }
+        .today_wrap-item_inner-item {
+            flex: 0 0 auto;
+        }
+        .today_wrap-item_inner-item_cont {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .today_wrap-item_inner-item_cont-link {
+            display: flex;
+            align-items: center;
+        }
+        .today_wrap-item_inner-item_cont-link_arrow {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("/img/arrow.png");
+            height: 10px;
+            width: 8px;
+            margin-left: 10px;
+        }
+        .today_wrap-item_inner-item_cont-title {
+            padding-top: 20px;
+            padding-bottom: 5px;
+        }
+        .today_wrap-item_inner-item_cont-title_item {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            color: #DC4700;
+        }
+        .today_wrap-item_inner-item_cont-head_item {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;
+            cursor: pointer;
+        }
+        .today_wrap-item_inner-item_cont-desc {
+            padding-bottom: 44px;
+        }
+        .today_wrap-item_inner-item_cont-desc_item {
+            font-family: Arial;
+            font-size: 16px;
+            line-height: 18px;
+            cursor: pointer;
+            color: #5E5E5E;
+        }
+        .today_wrap-item_inner-item_cont-tickets {
+            display: inline-block;
+            background: #FFE789;
+            width: 73px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .today_wrap-item_inner-item_cont-tickets_item {
+            font-family: Helvetica Neue;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 16px;
+            text-align: center;
+            color: #000000;
+        }
+        .today_wrap-item_inner-item_cont-footer {
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 25px;
+            color: #000000;
+            padding-bottom: 30px;
+            cursor: pointer;
+        }
+        .today_wrap-item_inner-banner {
+            margin-right: 32px;
+        }
+        .today_wrap-item_inner-banner_inner {
+            background-image: url("/img/banner.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 175px;
+            height: 100%;
+        }
+        .today_wrap-item:nth-child(1) {
+            flex-basis: 20%;
+        }
+        .today_wrap-item:nth-child(2) {
+            flex-basis: 80%;
+        }
+        .today_wrap-item_logo {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+        }
+        .today_wrap-item_logo-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("/img/LOGO.png");
+            background-repeat: no-repeat;
+            width: 107.38px;
+            height: 12.52px;
+        }    
+    </style>
+        <div class="today">
+            <div class="today_wrap">
+                <div class="today_wrap-item">
+                    <div class="today_wrap-item_logo">
+                        <div class="today_wrap-item_logo-inner"></div>
+                    </div>
+                </div>
+                <div class="today_wrap-item">
+                    <div class="today_wrap-item_inner">
+
+                        <div class="today_wrap-item_inner-banner">
+                            <div class="today_wrap-item_inner-banner_inner"></div>
+                        </div>
+
+                        <div class="today_wrap-item_inner-item">
+                            <div class="today_wrap-item_inner-item_cont">
+
+                                <div class="today_wrap-item_inner-item_cont-title">
+                                    <span class="today_wrap-item_inner-item_cont-title_item">Сегодня в кино</span>
+                                </div>
+
+                                <div class="today_wrap-item_inner-item_cont-head">
+                                    <span class="today_wrap-item_inner-item_cont-head_item">Планета обезьян: Война</span>
+                                </div>
+
+                                <div class="today_wrap-item_inner-item_cont-desc">
+                                    <span class="today_wrap-item_inner-item_cont-desc_item">Третья часть эпичной драмы</span>
+                                </div>
+
+                                <div class="today_wrap-item_inner-item_cont-tickets">
+                                    <span class="today_wrap-item_inner-item_cont-tickets_item">Билеты</span>
+                                </div>
+
+
+                                <div class="today_wrap-item_inner-item_cont-footer">
+
+                                    <div class="today_wrap-item_inner-item_cont-type">
+                                        <span class="today_wrap-item_inner-item_cont-type_item">Трейлер - Рецензия</span>
+                                    </div>
+
+                                    <div class="today_wrap-item_inner-item_cont-link">
+                                        <span class="today_wrap-item_inner-item_cont-link_item">Все фильмы в прокате</span>
+                                        <div class="today_wrap-item_inner-item_cont-link_arrow"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="today_wrap-item">
-            <div class="today_wrap-item_inner">
 
-                <div class="today_wrap-item_inner-banner">
-                    <div class="today_wrap-item_inner-banner_inner"></div>
+        <style>
+            .afisha {
+                border: 1px solid #e2e2e2;
+                width: 100%;
+                min-height: 250px;
+                max-height: 250px;
+                overflow: hidden;
+            }
+            .afisha_wrap {
+                height: 100%;
+                max-height: 250px;
+                display: flex;
+            }
+            .afisha_wrap-item {
+                height: 100%;
+                width: 100%;
+            }
+            .afisha_wrap-item:nth-child(1) {
+                flex-basis: 20%;
+                min-width: 290px;
+            }
+            .afisha_wrap-item:nth-child(2) {
+                flex-basis: 80%;
+            }
+            .afisha_wrap-item_car {
+                height: 100%;
+                width: 810px;
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                cursor: pointer;
+            }
+            .afisha_wrap-item_car::-webkit-scrollbar {
+                display: none;
+            }
+            .afisha_wrap-item_car-item {
+                display: flex;
+                align-items: center;
+                margin: 0 5px;
+                flex: 0 0 auto;
+            }
+            .afisha_wrap-item_car-item_inner {
+                background-image: url("/img/banner.png");
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+                width: 147px;
+                max-height: 209.43px;
+            }
+            .afisha_wrap-item_inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+            .afisha_wrap-item_inner-bottom {
+                font-family: Arial;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 25px;
+                color: #000000;
+                padding-bottom: 30px;
+                margin-left: 30px;
+                cursor: pointer;
+            }
+            .afisha_wrap-item_inner-bottom_inner {
+                display: flex;
+                align-items: center;
+            }
+            .afisha_wrap-item_inner-bottom_inner_arrow {
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url("/img/arrow.png");
+                height: 10px;
+                width: 8px;
+                margin-left: 10px;
+            }
+            .afisha_wrap-item_inner-top {
+                margin-left: 30px;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+            .afisha_wrap-item_inner-top_head {
+                background-image: url("/img/LOGO.png");
+                width: 130px;
+                height: 20px;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+            .afisha_wrap-item_inner-top_desc {
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 18px;
+                color: #000000;
+                cursor: pointer;
+            }
+        </style>
+        <div class="afisha">
+            <div class="afisha_wrap">
+                <div class="afisha_wrap-item">
+                    <div class="afisha_wrap-item_inner">
+                        <div class="afisha_wrap-item_inner-top">
+                            <div class="afisha_wrap-item_inner-top_head">
+                            </div>
+                            <div class="afisha_wrap-item_inner-top_desc">
+                                <span>Афиша кинотеатров</span>
+                            </div>
+                        </div>
+                        <div class="afisha_wrap-item_inner-bottom">
+                            <div class="afisha_wrap-item_inner-bottom_inner">
+                                <span>Все фильмы в прокате</span>
+                                <div class="afisha_wrap-item_inner-bottom_inner_arrow"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="afisha_wrap-item">
+                    <div class="afisha_wrap-item_car">
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                        <div class="afisha_wrap-item_car-item">
+                            <div class="afisha_wrap-item_car-item_inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- HORIZONTAL_TYPE -->
 
-                <div class="today_wrap-item_inner-item">
-                    <div class="today_wrap-item_inner-item_cont">
 
-                        <div class="today_wrap-item_inner-item_cont-title">
-                            <span class="today_wrap-item_inner-item_cont-title_item">Сегодня в кино</span>
+
+<!-- 300x600_TYPE -->
+    <style>
+        .vert {
+            width: 300px;
+            height: 600px;
+            border: 1px solid #e2e2e2;
+            overflow: hidden;
+        }
+        .vert_wrap-footer_item {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 20px;
+        }
+        .vert_wrap-footer_item-text {
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 25px;
+            color: #000000;
+            cursor: pointer;
+        }
+        .vert_wrap-footer_item-arrow {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("/img/arrow.png");
+            height: 10px;
+            width: 8px;
+            margin-left: 10px;
+        }
+        .vert_wrap-item_logo {
+            padding-left: 20px;
+            margin-top: 35px;
+            margin-bottom: 50px;
+        }
+        .vert_wrap-item_logo-item {
+            background-image: url("/img/LOGO.png");
+            width: 130px;
+            height: 20px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .vert_wrap-item_head {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            color: #000000;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .vert_wrap-item_scroll {
+            display: flex;
+            overflow-x: scroll;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .vert_wrap-item_scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .vert_wrap-item_scroll-item {
+            background-image: url("/img/vert_banner.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-width: 224.96px;
+            height: 321px;
+            margin: 0 10px 0 0;
+        }
+        .vert_wrap_btn {
+            background: #FFE789;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+            margin-bottom: 50px;
+        }
+        .vert_wrap_btn-item {
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #000000;
+        }
+    </style>
+    <div class="vert">
+        <div class="vert_wrap">
+            <div class="vert_wrap-item_logo">
+                <div class="vert_wrap-item_logo-item"></div>
+            </div>
+
+            <div class="vert_wrap-item">
+                <div class="vert_wrap-item_head">
+                    <span>Афиша кинотеатров</span>
+                </div>
+                <div class="vert_wrap-item_scroll">
+                    <div class="vert_wrap-item_scroll-item"></div>
+                    <div class="vert_wrap-item_scroll-item"></div>
+                    <div class="vert_wrap-item_scroll-item"></div>
+                    <div class="vert_wrap-item_scroll-item"></div>
+                </div>
+            </div>
+
+            <div class="vert_wrap_btn">
+                <div class="vert_wrap_btn-item">
+                    <span>БИЛЕТЫ В КИНО</span>
+                </div>
+            </div>
+
+            <div class="vert_wrap-footer">
+                <div class="vert_wrap-footer_item">
+                    <span class="vert_wrap-footer_item-text">Все фильмы в прокате</span>
+                    <div  class="vert_wrap-footer_item-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- WITHOUT_SCROLL -->
+        <style>
+        .vert {
+            width: 300px;
+            height: 600px;
+            border: 1px solid #e2e2e2;
+            overflow: hidden;
+        }
+        .vert_wrap-foot_cat {
+            margin-left: 20px;
+        }
+        .vert_wrap-foot_cat span {
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 25px;
+            color: #DC4700;
+        }
+        .vert_wrap-foot_cat span:nth-child(1) {
+            margin-right: 5px;
+        }
+        .vert_wrap-foot_item {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 20px;
+        }
+        .vert_wrap-foot_item-text {
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 25px;
+            color: #000000;
+            cursor: pointer;
+        }
+        .vert_wrap-foot_item-arrow {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("/img/arrow.png");
+            height: 10px;
+            width: 8px;
+            margin-left: 10px;
+        }
+        .vert_wrap-item_lg {
+            padding-left: 20px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+        .vert_wrap-item_lg-item {
+            background-image: url("/img/LOGO.png");
+            width: 130px;
+            height: 20px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .vert_wrap-item_head {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            color: #000000;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .vert_wrap-item_image {
+            width: 260px;
+            height: 371px;
+            background-image: url("/img/banner.png");
+            background-position: center;
+            background-size: cover;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .vert_wrap_button {
+            background: #FFE789;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+            margin-bottom: 10px;
+        }
+        .vert_wrap_button-item {
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #000000;
+        }
+        </style>
+            <div class="vert">
+                <div class="vert_wrap">
+                    <div class="vert_wrap-item_lg">
+                        <div class="vert_wrap-item_lg-item"></div>
+                    </div>
+
+                    <div class="vert_wrap-item">
+                        <div class="vert_wrap-item_head">
+                            <span>Афиша кинотеатров</span>
+                        </div>
+                        <div class="vert_wrap-item_image">
+                       
+                        </div>
+                    </div>
+
+                    <div class="vert_wrap_button">
+                        <div class="vert_wrap_button-item">
+                            <span>БИЛЕТЫ В КИНО</span>
+                        </div>
+                    </div>
+
+                    <div class="vert_wrap-foot">
+
+                        <div class="vert_wrap-foot_cat">
+                            <span class="vert_wrap-foot_item-text">Трейлер</span>
+                            <span class="vert_wrap-foot_item-text">Рецензия</span>
                         </div>
 
-                        <div class="today_wrap-item_inner-item_cont-head">
-                            <span class="today_wrap-item_inner-item_cont-head_item">Планета обезьян: Война</span>
+                        <div class="vert_wrap-foot_item">
+                            <span class="vert_wrap-foot_item-text">Все фильмы в прокате</span>
+                            <div  class="vert_wrap-foot_item-arrow"></div>
                         </div>
-
-                        <div class="today_wrap-item_inner-item_cont-desc">
-                            <span class="today_wrap-item_inner-item_cont-desc_item">Третья часть эпичной драмы</span>
-                        </div>
-
-                        <div class="today_wrap-item_inner-item_cont-tickets">
-                            <span class="today_wrap-item_inner-item_cont-tickets_item">Билеты</span>
-                        </div>
-
-
-                        <div class="today_wrap-item_inner-item_cont-footer">
-
-                            <div class="today_wrap-item_inner-item_cont-type">
-                                <span class="today_wrap-item_inner-item_cont-type_item">Трейлер - Рецензия</span>
-                            </div>
-
-                            <div class="today_wrap-item_inner-item_cont-link">
-                                <span class="today_wrap-item_inner-item_cont-link_item">Все фильмы в прокате</span>
-                                <div class="today_wrap-item_inner-item_cont-link_arrow"></div>
-
-                            </div>
-
-                        </div>
-
 
                     </div>
                 </div>
+            </div>
+        <!-- WITHOUT_SCROLL -->
 
 
+
+
+
+
+<!-- 300x600_TYPE -->
+
+<!-- Small type -->
+    <div class="smban">
+        <div class="smban_wrap">
+            <div class="smban_wrap-item">
+                <div class="smban_wrap-item_logo"></div>
+                <div class="smban_wrap-item_title">
+                    <!-- <span>Афиша кинотеатров</span>                -->
+                </div>
+            </div>
+            <div class="smban_wrap-scroll">
+                    
+                <div class="smban_wrap-scroll_item"></div>
+                <div class="smban_wrap-scroll_item"></div>
+                <div class="smban_wrap-scroll_item"></div>
 
             </div>
         </div>
     </div>
-</div>
-
-
+<!-- Small type -->
 
 </div>

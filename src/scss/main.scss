@@ -7,3 +7,21 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+
+
+.smban {
+  &_wrap {
+    &-scroll {
+      &_item {
+        
+      }
+    }
+
+    &-item {
+        &_logo {}
+
+        &_title {}
+    }
+  }
+}
